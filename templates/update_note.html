@@ -1,0 +1,14 @@
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Update Note</title>
+ </head>
+ <body>
+   <h1>Update Note</h1>
+   <form method="POST">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <input type="submit" value="Update">
+   </form>
+ </body>
+</html>

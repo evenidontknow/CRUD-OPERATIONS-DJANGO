@@ -1,0 +1,26 @@
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Notes</title>
+ </head>
+ <body>
+   <h1>{{Note.name}}</h1>
+   {% for item in Items %}
+       <ul>
+           <li>{{item.item_name}}</li>
+       </ul>
+   {% endfor %}
+   <form method="post">
+       {% csrf_token %}
+           <label for="id_item_name">
+             Item Name
+           </label>
+           <input type="text" class="form-control" id="id_item_name" name="item_name">
+         </br>
+       </br>
+       <button type="submit" class="btn btn-success">
+       Add Item
+       </button>
+   </form>
+</body>  
+</html>

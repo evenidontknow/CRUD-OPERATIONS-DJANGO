@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <h3>Log in</h3>
+        {% for message in messages %}
+        <div>
+            <font color="red">
+                {{ message }}
+            </font>
+        </div>
+        {% endfor %}
+            <form method="post" novalidate>
+              {% csrf_token %}
+              {{form.as_p}}
+              <button type="submit">Log in</button>
+            </form> 
+    </body>
+</html>
